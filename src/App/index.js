@@ -13,7 +13,8 @@ function App() {
   } = useLocalStorage("TODOS_V1", []);
   const [searchValue, setSearchValue] = React.useState("");
 
-  const completedTodos = todos.filter(todo => !!todo.completed).length
+  const completedTodos = todos.filter(
+    todo => !!todo.completed).length
   const totalTodos = todos.length
 
   console.log("Log 1");
