@@ -7,7 +7,7 @@ function TodoSearch({
 }) {
   return (
     <input
-      placeholder="Cortar cebolla"
+      placeholder="Busca un to-do"
       className="TodoSearch"
       value={searchValue}
       onChange={(event) => {
