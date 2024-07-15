@@ -25,6 +25,15 @@ import { useLocalStorage } from "./useLocalStorage";
           return todoText.includes(searchText)
         }
       )
+
+      const addTodo = (text) => {
+        const newTodos = [...todos];
+        newTodos.push({
+          text,
+          completed: false,
+        })
+        saveTodos(newTodos);
+      }
     
       const completeTodo = (text) => {
         const newTodos = [...todos];
@@ -54,6 +63,7 @@ import { useLocalStorage } from "./useLocalStorage";
           searchValue,
           setSearchValue,
           searchedTodos,
+          addTodo,
           completeTodo,
           deleteTodo,
           openModal,
